@@ -1,0 +1,4 @@
+﻿<%@ ServiceHost Language="C#" 
+    Debug="true" 
+    Service="HB.Services.Mocks.Products.ProductService, HB.Services.Mocks" 
+    Factory="Backbone.WCF.Factories.CompositionServiceHostFactory, Backbone.WCF" %>

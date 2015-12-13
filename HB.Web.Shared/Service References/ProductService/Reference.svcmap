@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="01868386-fd2e-4ade-85c8-c162f2f37777" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProductServiceHost.xsd" MetadataType="Schema" ID="caf24a68-3037-4c80-a9e6-eac07cfa2400" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProductServiceHost1.xsd" MetadataType="Schema" ID="647cbebc-9fcc-4fc1-a48c-5bc27414d8d6" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd0" />
+    <MetadataFile FileName="ProductServiceHost2.xsd" MetadataType="Schema" ID="8791d415-04ad-4926-aa13-ed3b5d303298" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd3" />
+    <MetadataFile FileName="ProductServiceHost3.xsd" MetadataType="Schema" ID="32f52292-de99-4061-83fb-0be53e2d6b3e" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd2" />
+    <MetadataFile FileName="ProductServiceHost4.xsd" MetadataType="Schema" ID="aee60d62-5edf-451f-af88-a05d80e772b6" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd5" />
+    <MetadataFile FileName="ProductServiceHost5.xsd" MetadataType="Schema" ID="bb4df56b-ec73-4f24-a6af-fb064f5a9d79" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd4" />
+    <MetadataFile FileName="ProductService.wsdl" MetadataType="Wsdl" ID="f55e9892-d260-4011-9018-057fd02e4313" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?wsdl" />
+    <MetadataFile FileName="ProductServiceHost6.xsd" MetadataType="Schema" ID="5be68d28-e61a-4b68-b34f-4e05e73e2b97" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd6" />
+    <MetadataFile FileName="ProductServiceHost.disco" MetadataType="Disco" ID="a9fb083e-0fca-4037-b566-6c9be6264db1" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?disco" />
+    <MetadataFile FileName="ProductServiceHost7.xsd" MetadataType="Schema" ID="528b751d-40f7-464d-924d-a500d5c21f6c" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd7" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

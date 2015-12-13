@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="72036c4f-de0e-4f08-8aa3-56cb2142f4e7" ChangeDateTime="12/13/2015 17:25:13">
+    <Property Name="ElementName" Value="[dbo].[tbl_ProductCategories].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tbl_ProductCategories]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CategoryId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b6bb622a-d01f-4804-87d7-b6b89405a26c" ChangeDateTime="12/13/2015 17:26:19">
+    <Property Name="ElementName" Value="[dbo].[tbl_Products].[Category]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tbl_Products]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CategoryId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="41536970-518e-4181-8888-ed7a77d4e44a" ChangeDateTime="12/13/2015 17:33:13">
+    <Property Name="ElementName" Value="[dbo].[tbl_Books].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tbl_Books]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProductId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="87474727-ddc7-4492-a28a-a84a95376fcb" ChangeDateTime="12/13/2015 17:33:50">
+    <Property Name="ElementName" Value="[dbo].[tbl_Books].[ProductId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tbl_Books]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BookId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="58774ab8-6403-469a-a27f-39d29834fa36" ChangeDateTime="12/13/2015 17:33:54">
+    <Property Name="ElementName" Value="[dbo].[tbl_Books].[CategoryId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tbl_Books]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProductId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fa350e65-5cdb-4d56-a69f-e92f94edcee7" ChangeDateTime="12/13/2015 17:40:59">
+    <Property Name="ElementName" Value="[dbo].[tbl_Products].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tbl_Products]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ProductId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8ebba90c-7b45-464c-92f1-75f47b58132d" ChangeDateTime="12/13/2015 17:41:15">
+    <Property Name="ElementName" Value="[dbo].[tbl_Movies].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[tbl_Movies]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MovieId" />
+  </Operation>
+</Operations>

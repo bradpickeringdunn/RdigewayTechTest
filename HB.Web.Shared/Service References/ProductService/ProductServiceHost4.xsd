@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/HB.Services.Models.Products.Dto" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/HB.Services.Models.Products.Dto" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/HB.Services.Models" />
+  <xs:complexType name="ArrayOfProductCategoryDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductCategoryDto" nillable="true" type="tns:ProductCategoryDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductCategoryDto" nillable="true" type="tns:ArrayOfProductCategoryDto" />
+  <xs:complexType name="ProductCategoryDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/HB.Services.Models" base="q1:BaseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductCategoryDto" nillable="true" type="tns:ProductCategoryDto" />
+  <xs:complexType name="ProductFilterDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryId" type="xs:unsignedInt" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductFilterDto" nillable="true" type="tns:ProductFilterDto" />
+</xs:schema>
