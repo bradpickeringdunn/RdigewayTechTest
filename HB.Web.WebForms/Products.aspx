@@ -10,11 +10,17 @@
     <form id="productsFrm" runat="server">
 
         <asp:GridView ID="GridView1" runat="server" Caption="1st Grid: Simple GridView with SqlDataSource"
-     AllowPaging="True"  PageSize="8">
+     autogeneratecolumns="false" >
       <Columns>
-        <asp:TemplateField HeaderText="Delete?">
+          <asp:BoundField DataField="Name" HeaderText="DealID" />
+          <asp:BoundField DataField="Description" HeaderText="DealID" />
+          <asp:BoundField DataField="Price" HeaderText="DealID" />
+         <asp:TemplateField HeaderText="">
             <ItemTemplate>
-                <asp:LinkButton ID="lnk1" runat="server" Text="Delete" OnClientClick="return confirm('Are you sure to Delete?')" CommandName="Delete"></asp:LinkButton>
+                <asp:LinkButton ID="lnk1" runat="server" Text="Buy" 
+                    OnClick="AddToBasket_Click"
+                    CommandArgument='<%#Eval("Id")%>'
+                    CommandName="Buy"></asp:LinkButton>
             </ItemTemplate>
         </asp:TemplateField>
       </Columns>

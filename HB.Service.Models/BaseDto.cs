@@ -12,7 +12,7 @@ namespace HB.Services.Models
         /// Gets and sets unique product id.
         /// </summary>
         [DataMember]
-        public uint Id { get; set; }
+        public int Id { get; set; }
 
         
 

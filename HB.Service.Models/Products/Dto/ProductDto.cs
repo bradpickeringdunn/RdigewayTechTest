@@ -25,5 +25,9 @@ namespace HB.Services.Models.Products.Dto
         /// </summary>
         [DataMember]
         public string Description { get; set; }
+
+        [DataMember]
+        public int CategoryId { get; set; }
+
     }
 }

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="HB.Services.Models" namespace="HB.Services.Models.Products.Dto" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="ProductDto" table="tbl_Products" lazy="false" >
+    <id name="Id" column="ProductId" >
+      <generator class="identity" />
+    </id>
+
+    <property name="Name">
+      <column name="Name" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Description">
+      <column name="Description" sql-type="varchar" not-null="true" />
+    </property>
+
+    <property name="Price">
+      <column name="Price" sql-type="decimal" not-null="true" />
+    </property>
+
+    <property name="CategoryId">
+      <column name="CategoryId" sql-type="int" not-null="true" />
+    </property>
+
+  </class>
+
+</hibernate-mapping>
+

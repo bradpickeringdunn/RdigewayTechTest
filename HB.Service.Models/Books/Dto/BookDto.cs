@@ -26,5 +26,8 @@ namespace HB.Services.Models.Books.Dto
         /// </summary>
         [DataMember]
         public string Title { get; set; }
+        public object Pagecount { get; set; }
+        public object Product { get; set; }
+        public object Productcategories { get; set; }
     }
 }

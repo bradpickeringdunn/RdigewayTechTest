@@ -38,6 +38,10 @@
     <Reference Include="Backbone">
       <HintPath>..\Libraries\Backbone\Backbone.dll</HintPath>
     </Reference>
+    <Reference Include="FakeItEasy, Version=1.25.3.0, Culture=neutral, PublicKeyToken=eff28e2146d5fd2c, processorArchitecture=MSIL">
+      <HintPath>..\packages\FakeItEasy.1.25.3\lib\net40\FakeItEasy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.2.2\lib\net45\NLog.dll</HintPath>
       <Private>True</Private>
@@ -57,10 +61,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="ServiceIntegrationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HB.Repository\HB.Persistence.csproj">
+      <Project>{b8ec7e55-4c1d-46dc-b206-f0a86c8988ff}</Project>
+      <Name>HB.Persistence</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HB.Service.Api\HB.Services.Api.csproj">
       <Project>{81953f8d-8d08-48c6-86d8-70f9ada480e4}</Project>
       <Name>HB.Services.Api</Name>
@@ -75,6 +83,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Choose>

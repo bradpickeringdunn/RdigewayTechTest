@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Backbone.Logging;
+using HB.Web.Shared.ProductService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,20 +8,19 @@ using System.Web.Mvc;
 
 namespace HB.Web.Mvc.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
+        public HomeController(ILogger logger, IProductServiceContract productService)
+            :base(logger, productService)
+        {
 
+        }
         public ActionResult Index()
         {
-            var productService = new Web.Shared.ProductService.ProductServiceContractClient();
-            var logger = new Backbone.Logging.DebugLogger();
-
-            var a = new HB.Web.Shared.Actions.Products.LoadProductCategoriesAction<dynamic>(logger, productService)
+            return new HB.Web.Shared.Actions.Products.LoadProductCategoriesAction<dynamic>(Logger, ProductService)
             {
-                OnSuccess = (m) => { return m; }
+                OnSuccess = (m) =>  View(m) 
             }.Execute();
-
-            return View();
         }
 
         public ActionResult About()

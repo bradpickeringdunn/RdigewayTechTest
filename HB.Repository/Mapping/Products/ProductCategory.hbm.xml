@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="HB.Services.Models" namespace="HB.Services.Models.Products.Dto" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="ProductCategoryDto" table="tbl_ProductCategories" lazy="false" >
+    <id name="Id" column="CategoryId" >
+      <generator class="identity" />
+    </id>
+
+    <property name="Name">
+      <column name="Name" sql-type="varchar" not-null="true" />
+    </property>
+
+  </class>
+
+</hibernate-mapping>
+

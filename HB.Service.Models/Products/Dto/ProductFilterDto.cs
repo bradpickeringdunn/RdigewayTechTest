@@ -9,11 +9,14 @@ namespace HB.Services.Models.Products.Dto
 {
     public class ProductFilterDto
     {
-        public uint CategoryId { get; set; }
-    }
+        public ProductFilterDto()
+        {
+            this.ProductIds = new List<int>();
+        }
 
-    //public Expression AsPredicate()
-    //{
-    //    throw new NotImplementedException();
-    //}
+        public int? CategoryId { get; set; }
+
+        public IList<int> ProductIds { get; set; }
+    }
+    
 }

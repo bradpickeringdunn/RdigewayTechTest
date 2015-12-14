@@ -19,8 +19,27 @@
   <xs:element name="ProductCategoryDto" nillable="true" type="tns:ProductCategoryDto" />
   <xs:complexType name="ProductFilterDto">
     <xs:sequence>
-      <xs:element minOccurs="0" name="CategoryId" type="xs:unsignedInt" />
+      <xs:element minOccurs="0" name="CategoryId" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ProductFilterDto" nillable="true" type="tns:ProductFilterDto" />
+  <xs:complexType name="ArrayOfProductDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductDto" nillable="true" type="tns:ProductDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductDto" nillable="true" type="tns:ArrayOfProductDto" />
+  <xs:complexType name="ProductDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/HB.Services.Models" base="q2:BaseDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CategoryId" type="xs:int" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProductDto" nillable="true" type="tns:ProductDto" />
 </xs:schema>

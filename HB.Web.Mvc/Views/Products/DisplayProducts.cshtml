@@ -1,0 +1,43 @@
+﻿@model HB.Web.Shared.ViewModels.BaseViewModel<IList<HB.Services.Models.Products.Dto.ProductDto>>
+@{
+    Layout = null;
+}
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        Product name
+                    </td>
+                    <td>
+                        Description
+                    </td>
+                    <td>
+                        Price
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model.Payload)
+                {
+                <tr>
+                    <td>
+                        @product.Name
+                    </td>
+                    <td>
+                        @product.Description
+                    </td>
+                    <td>
+                        @product.Price
+                    </td>
+                    <td>
+                        @Html.ActionLink("Buy", "AddToProductBasket", "ShoppingBasket", new {productId = product.Id }, null)
+                    </td>  
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+

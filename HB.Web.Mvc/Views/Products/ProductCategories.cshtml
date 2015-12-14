@@ -1,0 +1,14 @@
+﻿
+@model HB.Web.Shared.ViewModels.BaseViewModel<IList<HB.Services.Models.Products.Dto.ProductCategoryDto>>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+    <ul>
+        @foreach (var category in Model.Payload)
+        {
+        <li>
+            @Html.ActionLink(category.Name, "LoadProducts", "Products", new {categoryId = category.Id }, null);
+        </li>
+        }
+    </ul>

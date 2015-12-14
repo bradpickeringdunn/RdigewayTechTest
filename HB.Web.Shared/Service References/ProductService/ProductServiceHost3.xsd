@@ -15,7 +15,9 @@
   <xs:complexType name="LoadProductsResult">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Backbone.Services.Results" base="q3:GenericServiceResult">
-        <xs:sequence />
+        <xs:sequence>
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/HB.Services.Models.Products.Dto" minOccurs="0" name="Products" nillable="true" type="q4:ArrayOfProductDto" />
+        </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

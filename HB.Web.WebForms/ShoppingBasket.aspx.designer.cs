@@ -13,21 +13,21 @@ namespace HB.Web.WebForms {
     public partial class ShoppingBasket {
         
         /// <summary>
-        /// productsFrm control.
+        /// shoppingBasketForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm productsFrm;
+        protected global::System.Web.UI.HtmlControls.HtmlForm shoppingBasketForm;
         
         /// <summary>
-        /// GridView1 control.
+        /// shoppingBasket control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView shoppingBasket;
     }
 }

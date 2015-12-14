@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace HB.Services.Tests
+namespace HB.Web.Mvc.Tests
 {
     [TestClass]
     public class UnitTest1
