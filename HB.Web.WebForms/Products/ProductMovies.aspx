@@ -8,7 +8,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:GridView ID="MovieGrid" runat="server" Caption="1st Grid: Simple GridView with SqlDataSource"
+        <asp:GridView ID="MovieGrid" runat="server" Caption="List of movies for sale"
          autogeneratecolumns="false" >
           <Columns>
               <asp:BoundField DataField="Name" HeaderText="DealID" />

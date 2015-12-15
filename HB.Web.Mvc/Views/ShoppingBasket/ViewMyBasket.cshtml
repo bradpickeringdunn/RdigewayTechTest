@@ -32,7 +32,7 @@
                         @product.Description
                     </td>
                     <td>
-                        @product.Price
+                        @product.Price.ToString("C", HB.Web.Shared.Localization.Cultures.UnitedKingdom)
                     </td>
                 </tr>
             }

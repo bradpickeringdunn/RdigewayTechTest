@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace HB.Web.WebForms.Products
@@ -13,25 +12,28 @@ namespace HB.Web.WebForms.Products
     {
         private readonly IProductServiceContract productService = new HB.Web.Shared.ProductService.ProductServiceContractClient();
         private ILogger logger = new DebugLogger();
-
+                
         protected void Page_Load(object sender, EventArgs e)
         {
-            var productResult = productService.LoadBooks();
+            if (!IsPostBack)
+            {
+                var productResult = productService.LoadBooks();
 
-            var products = from product in productResult.Books
-                           select new
-                           {
-                               Id = product.Id,
-                               Name = product.Name,
-                               Description = product.Description,
-                               Price = product.Price,
-                               Author = product.Author,
-                               ISBN = product.ISBN,
-                               Pagecount = product.PageCount
-                           };
+                var products = from product in productResult.Books
+                               select new
+                               {
+                                   Id = product.Id,
+                                   Name = product.Name,
+                                   Description = product.Description,
+                                   Price = product.Price.ToString("C", Shared.Localization.Cultures.UnitedKingdom),
+                                   Author = product.Author,
+                                   ISBN = product.ISBN,
+                                   Pagecount = product.PageCount
+                               };
 
-            ProductGrid.DataSource = products;
-            ProductGrid.DataBind();
+                ProductGrid.DataSource = products;
+                ProductGrid.DataBind();
+            }
         }
 
         protected void AddToBasket_Click(object sender, EventArgs e)
@@ -54,8 +56,12 @@ namespace HB.Web.WebForms.Products
 
                 Session["products"] = existingProducts;
             }
+            else
+            {
+                logger.Error("Selected product is not an int.");
+            }
 
-            var url = VirtualPathUtility.ToAbsolute("~/ShoppingBasket");
+            var url = VirtualPathUtility.ToAbsolute("~/products/ShoppingBasket");
             Response.Redirect(url);
         }
     }

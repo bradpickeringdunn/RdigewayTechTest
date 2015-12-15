@@ -19,21 +19,28 @@ namespace HB.Web.WebForms
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            var productIds = (List<int>)Session["products"];
+            if (!IsPostBack)
+            {
+                var productIds = (List<int>)Session["products"];
 
-            var productResult = new LoadProductsResult();
-
-            using(var service = new ProductServiceContractClient()) {
+                var productResult = new LoadProductsResult();
 
                 productResult = productService.LoadProductsBy(new LoadProductsRequest(new ProductFilterDto()
                 {
                     ProductIds = productIds
                 }));
-            }
-        
 
-            shoppingBasket.DataSource = productResult.Products;
-            shoppingBasket.DataBind();
+                var products = (from product in productResult.Products
+                                select new
+                                {
+                                    Name = product.Name,
+                                    Description = product.Description,
+                                    Price = product.Price.ToString("C", Shared.Localization.Cultures.UnitedKingdom)
+                                });
+
+                shoppingBasket.DataSource = products;
+                shoppingBasket.DataBind();
+            }
         }
     }
 }
