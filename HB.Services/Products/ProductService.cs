@@ -1,16 +1,15 @@
-﻿using System;
-using System.Linq;
-using HB.Services.Api.Products;
-using HB.Services.Models.Products.Requests;
-using HB.Services.Models.Products.Results;
-using Backbone.Logging;
+﻿using Backbone.Logging;
 using Backbone.Repository;
-using HB.Services.Models.Products.Dto;
-using System.Collections.Generic;
+using HB.Services.Api.Products;
 using HB.Services.Models.Books.Dto;
+using HB.Services.Models.Books.Result;
 using HB.Services.Models.Movies.Dto;
 using HB.Services.Models.Movies.Result;
-using HB.Services.Models.Books.Result;
+using HB.Services.Models.Products.Dto;
+using HB.Services.Models.Products.Requests;
+using HB.Services.Models.Products.Results;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace HB.Services.Products
 {
