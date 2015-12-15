@@ -9,7 +9,11 @@
       <xsd:import schemaLocation="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
       <xsd:import schemaLocation="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/HB.Services.Models.Products.Dto" />
       <xsd:import schemaLocation="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/HB.Services.Models" />
-      <xsd:import schemaLocation="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/HB.Services.Models.Products.Requests" />
+      <xsd:import schemaLocation="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/HB.Services.Models.Books.Result" />
+      <xsd:import schemaLocation="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/HB.Services.Models.Books.Dto" />
+      <xsd:import schemaLocation="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/HB.Services.Models.Movies.Result" />
+      <xsd:import schemaLocation="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/HB.Services.Models.Movies.Dto" />
+      <xsd:import schemaLocation="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/HB.Services.Models.Products.Requests" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IProductServiceContract_LoadProductCategories_InputMessage">
@@ -17,6 +21,18 @@
   </wsdl:message>
   <wsdl:message name="IProductServiceContract_LoadProductCategories_OutputMessage">
     <wsdl:part name="parameters" element="tns:LoadProductCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductServiceContract_LoadBooks_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadBooks" />
+  </wsdl:message>
+  <wsdl:message name="IProductServiceContract_LoadBooks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadBooksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductServiceContract_LoadMovies_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadMovies" />
+  </wsdl:message>
+  <wsdl:message name="IProductServiceContract_LoadMovies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadMoviesResponse" />
   </wsdl:message>
   <wsdl:message name="IProductServiceContract_LoadProductsBy_InputMessage">
     <wsdl:part name="parameters" element="tns:LoadProductsBy" />
@@ -29,6 +45,14 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IProductServiceContract/LoadProductCategories" message="tns:IProductServiceContract_LoadProductCategories_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IProductServiceContract/LoadProductCategoriesResponse" message="tns:IProductServiceContract_LoadProductCategories_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="LoadBooks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductServiceContract/LoadBooks" message="tns:IProductServiceContract_LoadBooks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductServiceContract/LoadBooksResponse" message="tns:IProductServiceContract_LoadBooks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadMovies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductServiceContract/LoadMovies" message="tns:IProductServiceContract_LoadMovies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductServiceContract/LoadMoviesResponse" message="tns:IProductServiceContract_LoadMovies_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="LoadProductsBy">
       <wsdl:input wsaw:Action="http://tempuri.org/IProductServiceContract/LoadProductsBy" message="tns:IProductServiceContract_LoadProductsBy_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IProductServiceContract/LoadProductsByResponse" message="tns:IProductServiceContract_LoadProductsBy_OutputMessage" />
@@ -38,6 +62,24 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="LoadProductCategories">
       <soap:operation soapAction="http://tempuri.org/IProductServiceContract/LoadProductCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadBooks">
+      <soap:operation soapAction="http://tempuri.org/IProductServiceContract/LoadBooks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadMovies">
+      <soap:operation soapAction="http://tempuri.org/IProductServiceContract/LoadMovies" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

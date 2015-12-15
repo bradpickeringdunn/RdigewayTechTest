@@ -58,17 +58,24 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
+    <Folder Include="Views" />
+    <Folder Include="Scripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\tbl_ProductCategories.sql" />
     <Build Include="Tables\tbl_Products.sql" />
     <Build Include="Tables\tbl_Books.sql" />
     <Build Include="Tables\tbl_Movies.sql" />
+    <Build Include="Views\vw_Books.sql" />
+    <Build Include="Views\vw_Movies.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="HB.Data.refactorlog" />
   </ItemGroup>
   <ItemGroup>
     <None Include="HonestBobDev.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\PostDeployment_ProductData.sql" />
   </ItemGroup>
 </Project>

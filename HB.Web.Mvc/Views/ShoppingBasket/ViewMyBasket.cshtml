@@ -1,0 +1,41 @@
+﻿@model HB.Web.Shared.ViewModels.BaseViewModel<IList<HB.Services.Models.Products.Dto.ProductDto>>
+@{
+    ViewBag.Title = "ViewMyBasket";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ViewMyBasket</h2>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>
+                    Product name
+                </td>
+                <td>
+                    Description
+                </td>
+                <td>
+                    Price
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.Payload)
+            {
+                <tr>
+                    <td>
+                        @product.Name
+                    </td>
+                    <td>
+                        @product.Description
+                    </td>
+                    <td>
+                        @product.Price
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

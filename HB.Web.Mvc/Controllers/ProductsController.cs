@@ -12,8 +12,15 @@ namespace HB.Web.Mvc.Controllers
     
     public class ProductsController : BaseController
     {
+        private static IDictionary<int, ActionResult> ProductActions;
+
         public ProductsController(ILogger logger, IProductServiceContract productService)
-        :base(logger, productService){ }
+        :base(logger, productService)
+        {
+            InitializeProductActions();
+        }
+
+        
 
         public ActionResult Index()
         {
@@ -23,14 +30,47 @@ namespace HB.Web.Mvc.Controllers
             }.Execute();
         }
 
-        public ActionResult LoadProducts(int categoryId)
+        public ActionResult LoadProductByCategoryId(int categoryId)
         {
-            return new Shared.Actions.Products.LoadProductsByCategoryAction<ActionResult>(Logger, ProductService)
-            {
-                OnSuccess = (m) => View(ViewPath.Products.DisplayProducts, m)
-            }.Execute(categoryId);
+            return RedirectToProduct(categoryId);
         }
 
-        
+        public ActionResult LoadBooks()
+        {
+            return new Shared.Actions.Products.LoadBooksAction<ActionResult>(Logger, ProductService)
+            {
+                OnSuccess = (m) => View(ViewPath.Products.Books, m)
+            }.Execute();
+        }
+
+        public ActionResult LoadMovies()
+        {
+            return new Shared.Actions.Products.LoadMoviesAction<ActionResult>(Logger, ProductService)
+            {
+                OnSuccess = (m) => View(ViewPath.Products.Movies, m)
+            }.Execute();
+        }
+
+        private ActionResult RedirectToProduct(int categoryId)
+        {
+            if (ProductActions.ContainsKey(categoryId))
+            {
+                return ProductActions[categoryId];
+            }
+
+            return View();
+        }
+
+        private void InitializeProductActions()
+        {
+            if (ProductActions.IsNull())
+            {
+                var productActions = new Dictionary<int, ActionResult>();
+                productActions.Add(1, RedirectToAction("LoadBooks"));
+                productActions.Add(2, RedirectToAction("LoadMovies"));
+
+                ProductActions = productActions;
+            }
+        }
     }
 }

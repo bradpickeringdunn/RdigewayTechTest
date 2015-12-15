@@ -8,7 +8,7 @@
         @foreach (var category in Model.Payload)
         {
         <li>
-            @Html.ActionLink(category.Name, "LoadProducts", "Products", new {categoryId = category.Id }, null);
+            @Html.ActionLink(category.Name, "LoadProductByCategoryId", "Products", new {categoryId = category.Id }, null);
         </li>
         }
     </ul>

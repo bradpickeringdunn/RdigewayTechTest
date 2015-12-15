@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/HB.Services.Models.Products.Results" />
-  <xs:import schemaLocation="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/HB.Services.Models.Products.Requests" />
+  <xs:import schemaLocation="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/HB.Services.Models.Books.Result" />
+  <xs:import schemaLocation="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/HB.Services.Models.Movies.Result" />
+  <xs:import schemaLocation="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/HB.Services.Models.Products.Requests" />
   <xs:element name="LoadProductCategories">
     <xs:complexType>
       <xs:sequence />
@@ -14,17 +16,41 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="LoadBooks">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadBooksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/HB.Services.Models.Books.Result" minOccurs="0" name="LoadBooksResult" nillable="true" type="q2:LoadBooksResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadMovies">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadMoviesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/HB.Services.Models.Movies.Result" minOccurs="0" name="LoadMoviesResult" nillable="true" type="q3:LoadMoviesResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="LoadProductsBy">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/HB.Services.Models.Products.Requests" minOccurs="0" name="request" nillable="true" type="q2:LoadProductsRequest" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/HB.Services.Models.Products.Requests" minOccurs="0" name="request" nillable="true" type="q4:LoadProductsRequest" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="LoadProductsByResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/HB.Services.Models.Products.Results" minOccurs="0" name="LoadProductsByResult" nillable="true" type="q3:LoadProductsResult" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/HB.Services.Models.Products.Results" minOccurs="0" name="LoadProductsByResult" nillable="true" type="q5:LoadProductsResult" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

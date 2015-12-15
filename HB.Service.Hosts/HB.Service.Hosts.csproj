@@ -125,10 +125,6 @@
       <Project>{28bc2872-874d-4df2-83b3-61c1e8074568}</Project>
       <Name>HB.Services.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HB.Services.Mocks\HB.Services.Mocks.csproj">
-      <Project>{0d4127ad-d325-4996-9d35-9fe03b6e7961}</Project>
-      <Name>HB.Services.Mocks</Name>
-    </ProjectReference>
     <ProjectReference Include="..\HB.Services\HB.Services.csproj">
       <Project>{077c08be-8647-4a30-b0e9-2f37369e1ddf}</Project>
       <Name>HB.Services</Name>

@@ -39,7 +39,7 @@ namespace HB.Web.Mvc.App_Start
             // container.LoadConfiguration();
 
             // TODO: Register your types here
-            container.RegisterType<ILogger, DebugLogger>();
+             container.RegisterType<ILogger, DebugLogger>();
             container.RegisterType<IProductServiceContract, ProductServiceFacade>();
         }
     }

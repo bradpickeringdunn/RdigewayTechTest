@@ -1,6 +1,7 @@
 ﻿using Backbone.Logging;
 using HB.Services.Models.Products.Dto;
 using HB.Services.Models.Products.Requests;
+using HB.Services.Models.Products.Results;
 using HB.Web.Shared.ProductService;
 using System;
 using System.Collections.Generic;
@@ -20,10 +21,16 @@ namespace HB.Web.WebForms
         {
             var productIds = (List<int>)Session["products"];
 
-            var productResult = productService.LoadProductsBy(new LoadProductsRequest(new ProductFilterDto()
-            {
-                ProductIds = productIds
-            }));
+            var productResult = new LoadProductsResult();
+
+            using(var service = new ProductServiceContractClient()) {
+
+                productResult = productService.LoadProductsBy(new LoadProductsRequest(new ProductFilterDto()
+                {
+                    ProductIds = productIds
+                }));
+            }
+        
 
             shoppingBasket.DataSource = productResult.Products;
             shoppingBasket.DataBind();

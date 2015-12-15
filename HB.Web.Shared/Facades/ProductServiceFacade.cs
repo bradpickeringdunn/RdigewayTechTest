@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using HB.Services.Models.Products.Requests;
 using HB.Services.Models.Products.Results;
+using HB.Services.Models.Books.Result;
+using HB.Services.Models.Movies.Result;
 
 namespace HB.Web.Shared.Facades
 {
@@ -16,6 +18,26 @@ namespace HB.Web.Shared.Facades
         public ProductServiceFacade()
         {
             this.productService = new ProductServiceContractClient();
+        }
+
+        public LoadBooksResult LoadBooks()
+        {
+            return productService.LoadBooks();
+        }
+
+        public Task<LoadBooksResult> LoadBooksAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public LoadMoviesResult LoadMovies()
+        {
+            return productService.LoadMovies();
+        }
+
+        public Task<LoadMoviesResult> LoadMoviesAsync()
+        {
+            throw new NotImplementedException();
         }
 
         public LoadProductCategoriesResult LoadProductCategories()
@@ -32,6 +54,7 @@ namespace HB.Web.Shared.Facades
         {
             return productService.LoadProductsBy(request);
         }
+
         public Task<LoadProductsResult> LoadProductsByAsync(LoadProductsRequest request)
         {
             throw new NotImplementedException();

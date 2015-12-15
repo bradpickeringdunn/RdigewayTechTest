@@ -10,9 +10,22 @@ namespace HB.Services.Models.Movies.Dto
     public class MovieDto : ProductDto
     {
         /// <summary>
-        /// Gets and sets a movies category.
+        /// Gets and sets a movies length.
         /// </summary>
         [DataMember]
-        public string Category { get; set; }
+        public string Length { get; set; }
+
+        /// <summary>
+        /// Gets and sets a movies age limit.
+        /// </summary>
+        [DataMember]
+        public int AgeLimit { get; set; }
+
+        /// <summary>
+        /// Gets and sets a movies genre.
+        /// </summary>
+        [DataMember]
+        public string Genre { get; set; }
+        
     }
 }

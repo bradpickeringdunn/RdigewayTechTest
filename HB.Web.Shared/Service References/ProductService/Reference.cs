@@ -21,6 +21,18 @@ namespace HB.Web.Shared.ProductService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductServiceContract/LoadProductCategories", ReplyAction="http://tempuri.org/IProductServiceContract/LoadProductCategoriesResponse")]
         System.Threading.Tasks.Task<HB.Services.Models.Products.Results.LoadProductCategoriesResult> LoadProductCategoriesAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductServiceContract/LoadBooks", ReplyAction="http://tempuri.org/IProductServiceContract/LoadBooksResponse")]
+        HB.Services.Models.Books.Result.LoadBooksResult LoadBooks();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductServiceContract/LoadBooks", ReplyAction="http://tempuri.org/IProductServiceContract/LoadBooksResponse")]
+        System.Threading.Tasks.Task<HB.Services.Models.Books.Result.LoadBooksResult> LoadBooksAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductServiceContract/LoadMovies", ReplyAction="http://tempuri.org/IProductServiceContract/LoadMoviesResponse")]
+        HB.Services.Models.Movies.Result.LoadMoviesResult LoadMovies();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductServiceContract/LoadMovies", ReplyAction="http://tempuri.org/IProductServiceContract/LoadMoviesResponse")]
+        System.Threading.Tasks.Task<HB.Services.Models.Movies.Result.LoadMoviesResult> LoadMoviesAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductServiceContract/LoadProductsBy", ReplyAction="http://tempuri.org/IProductServiceContract/LoadProductsByResponse")]
         HB.Services.Models.Products.Results.LoadProductsResult LoadProductsBy(HB.Services.Models.Products.Requests.LoadProductsRequest request);
         
@@ -61,6 +73,22 @@ namespace HB.Web.Shared.ProductService {
         
         public System.Threading.Tasks.Task<HB.Services.Models.Products.Results.LoadProductCategoriesResult> LoadProductCategoriesAsync() {
             return base.Channel.LoadProductCategoriesAsync();
+        }
+        
+        public HB.Services.Models.Books.Result.LoadBooksResult LoadBooks() {
+            return base.Channel.LoadBooks();
+        }
+        
+        public System.Threading.Tasks.Task<HB.Services.Models.Books.Result.LoadBooksResult> LoadBooksAsync() {
+            return base.Channel.LoadBooksAsync();
+        }
+        
+        public HB.Services.Models.Movies.Result.LoadMoviesResult LoadMovies() {
+            return base.Channel.LoadMovies();
+        }
+        
+        public System.Threading.Tasks.Task<HB.Services.Models.Movies.Result.LoadMoviesResult> LoadMoviesAsync() {
+            return base.Channel.LoadMoviesAsync();
         }
         
         public HB.Services.Models.Products.Results.LoadProductsResult LoadProductsBy(HB.Services.Models.Products.Requests.LoadProductsRequest request) {

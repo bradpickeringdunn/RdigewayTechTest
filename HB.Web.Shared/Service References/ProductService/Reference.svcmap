@@ -22,16 +22,20 @@
     <MetadataSource Address="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ProductServiceHost.xsd" MetadataType="Schema" ID="caf24a68-3037-4c80-a9e6-eac07cfa2400" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd1" />
-    <MetadataFile FileName="ProductServiceHost1.xsd" MetadataType="Schema" ID="647cbebc-9fcc-4fc1-a48c-5bc27414d8d6" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd0" />
-    <MetadataFile FileName="ProductServiceHost2.xsd" MetadataType="Schema" ID="8791d415-04ad-4926-aa13-ed3b5d303298" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd3" />
-    <MetadataFile FileName="ProductServiceHost3.xsd" MetadataType="Schema" ID="32f52292-de99-4061-83fb-0be53e2d6b3e" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd2" />
-    <MetadataFile FileName="ProductServiceHost4.xsd" MetadataType="Schema" ID="aee60d62-5edf-451f-af88-a05d80e772b6" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd5" />
-    <MetadataFile FileName="ProductServiceHost5.xsd" MetadataType="Schema" ID="bb4df56b-ec73-4f24-a6af-fb064f5a9d79" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd4" />
-    <MetadataFile FileName="ProductService.wsdl" MetadataType="Wsdl" ID="f55e9892-d260-4011-9018-057fd02e4313" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?wsdl" />
-    <MetadataFile FileName="ProductServiceHost6.xsd" MetadataType="Schema" ID="5be68d28-e61a-4b68-b34f-4e05e73e2b97" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd6" />
     <MetadataFile FileName="ProductServiceHost.disco" MetadataType="Disco" ID="a9fb083e-0fca-4037-b566-6c9be6264db1" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?disco" />
+    <MetadataFile FileName="ProductServiceHost81.xsd" MetadataType="Schema" ID="a03c5259-4ea0-4c90-9995-b6df381b9e05" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd8" />
+    <MetadataFile FileName="ProductServiceHost5.xsd" MetadataType="Schema" ID="bb4df56b-ec73-4f24-a6af-fb064f5a9d79" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd4" />
+    <MetadataFile FileName="ProductServiceHost1.xsd" MetadataType="Schema" ID="647cbebc-9fcc-4fc1-a48c-5bc27414d8d6" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd0" />
+    <MetadataFile FileName="ProductService.wsdl" MetadataType="Wsdl" ID="f55e9892-d260-4011-9018-057fd02e4313" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?wsdl" />
     <MetadataFile FileName="ProductServiceHost7.xsd" MetadataType="Schema" ID="528b751d-40f7-464d-924d-a500d5c21f6c" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd7" />
+    <MetadataFile FileName="ProductServiceHost2.xsd" MetadataType="Schema" ID="8791d415-04ad-4926-aa13-ed3b5d303298" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd3" />
+    <MetadataFile FileName="ProductServiceHost9.xsd" MetadataType="Schema" ID="2ea35689-2bcc-474e-acb0-0b76a14e4386" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd11" />
+    <MetadataFile FileName="ProductServiceHost6.xsd" MetadataType="Schema" ID="5be68d28-e61a-4b68-b34f-4e05e73e2b97" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd6" />
+    <MetadataFile FileName="ProductServiceHost3.xsd" MetadataType="Schema" ID="32f52292-de99-4061-83fb-0be53e2d6b3e" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd2" />
+    <MetadataFile FileName="ProductServiceHost8.xsd" MetadataType="Schema" ID="e3068764-4124-4b92-abd7-724a99624a69" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd9" />
+    <MetadataFile FileName="ProductServiceHost4.xsd" MetadataType="Schema" ID="aee60d62-5edf-451f-af88-a05d80e772b6" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd5" />
+    <MetadataFile FileName="ProductServiceHost.xsd" MetadataType="Schema" ID="caf24a68-3037-4c80-a9e6-eac07cfa2400" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProductServiceHost91.xsd" MetadataType="Schema" ID="7bdd50a6-c48e-4c83-8153-b44b7d21d824" SourceId="1" SourceUrl="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd10" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

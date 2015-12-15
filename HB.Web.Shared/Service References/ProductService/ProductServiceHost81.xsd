@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/HB.Services.Models.Books.Dto" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/HB.Services.Models.Books.Dto" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/HB.Services.Models.Products.Dto" />
+  <xs:complexType name="ArrayOfBookDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BookDto" nillable="true" type="tns:BookDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBookDto" nillable="true" type="tns:ArrayOfBookDto" />
+  <xs:complexType name="BookDto">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/HB.Services.Models.Products.Dto" base="q1:ProductDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Author" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ISBN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PageCount" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BookDto" nillable="true" type="tns:BookDto" />
+</xs:schema>

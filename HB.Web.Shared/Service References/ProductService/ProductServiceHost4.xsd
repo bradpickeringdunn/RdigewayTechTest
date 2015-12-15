@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/HB.Services.Models.Products.Dto" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/HB.Services.Models.Products.Dto" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/HB.Services.Models" />
+  <xs:import schemaLocation="http://localhost/HB.Service.Hosts/Products/ProductServiceHost.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:complexType name="ArrayOfProductCategoryDto">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductCategoryDto" nillable="true" type="tns:ProductCategoryDto" />
@@ -17,18 +18,6 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="ProductCategoryDto" nillable="true" type="tns:ProductCategoryDto" />
-  <xs:complexType name="ProductFilterDto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="CategoryId" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ProductFilterDto" nillable="true" type="tns:ProductFilterDto" />
-  <xs:complexType name="ArrayOfProductDto">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductDto" nillable="true" type="tns:ProductDto" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfProductDto" nillable="true" type="tns:ArrayOfProductDto" />
   <xs:complexType name="ProductDto">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/HB.Services.Models" base="q2:BaseDto">
@@ -42,4 +31,17 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="ProductDto" nillable="true" type="tns:ProductDto" />
+  <xs:complexType name="ProductFilterDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryId" nillable="true" type="xs:int" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ProductIds" nillable="true" type="q3:ArrayOfint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProductFilterDto" nillable="true" type="tns:ProductFilterDto" />
+  <xs:complexType name="ArrayOfProductDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductDto" nillable="true" type="tns:ProductDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductDto" nillable="true" type="tns:ArrayOfProductDto" />
 </xs:schema>

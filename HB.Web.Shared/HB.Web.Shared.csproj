@@ -66,8 +66,9 @@
     <Compile Include="Actions\BaseAction.cs" />
     <Compile Include="Actions\Basket\AddProductToBasketAction.cs" />
     <Compile Include="Actions\Basket\LoadProductsFromBasketAction.cs" />
+    <Compile Include="Actions\Products\LoadBooksAction.cs" />
+    <Compile Include="Actions\Products\LoadMoviesAction.cs" />
     <Compile Include="Actions\Products\LoadProductCategoriesAction.cs" />
-    <Compile Include="Actions\Products\LoadProductsByCategoryAction.cs" />
     <Compile Include="Facades\ProductServiceFacade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\ProductService\Reference.cs">
@@ -83,6 +84,8 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\HB.Services.Models.Books.Result.LoadBooksResult.datasource" />
+    <None Include="Properties\DataSources\HB.Services.Models.Movies.Result.LoadMoviesResult.datasource" />
     <None Include="Properties\DataSources\HB.Services.Models.Products.Results.LoadProductCategoriesResult.datasource" />
     <None Include="Properties\DataSources\HB.Services.Models.Products.Results.LoadProductsResult.datasource" />
     <None Include="Service References\ProductService\ProductService.wsdl" />
@@ -130,6 +133,18 @@
     <None Include="Service References\ProductService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\ProductService\ProductServiceHost8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductService\ProductServiceHost81.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductService\ProductServiceHost9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductService\ProductServiceHost91.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\ProductService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

@@ -1,4 +1,4 @@
-﻿@model HB.Web.Shared.ViewModels.BaseViewModel<IList<HB.Services.Models.Products.Dto.ProductDto>>
+﻿@model HB.Web.Shared.ViewModels.BaseViewModel<IList<HB.Services.Models.Books.Dto.BookDto>>
 @{
     Layout = null;
 }
@@ -15,8 +15,15 @@
                     <td>
                         Price
                     </td>
-                </tr>
-                <tr>
+                    <td>
+                        Author
+                    </td>
+                    <td>
+                        ISBN
+                    </td>
+                    <td>
+                        Pagecount
+                    </td>
                 </tr>
             </thead>
             <tbody>
@@ -31,6 +38,15 @@
                     </td>
                     <td>
                         @product.Price
+                    </td>
+                    <td>
+                        @product.Author
+                    </td>
+                    <td>
+                        @product.ISBN
+                    </td>
+                    <td>
+                        @product.PageCount
                     </td>
                     <td>
                         @Html.ActionLink("Buy", "AddToProductBasket", "ShoppingBasket", new {productId = product.Id }, null)

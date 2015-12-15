@@ -1,5 +1,6 @@
 ﻿using Backbone.Logging;
 using Backbone.Utilities;
+using HB.Services.Models.Books.Dto;
 using HB.Services.Models.Products.Dto;
 using HB.Services.Models.Products.Requests;
 using HB.Web.Shared.ProductService;
@@ -12,14 +13,14 @@ using System.Threading.Tasks;
 
 namespace HB.Web.Shared.Actions.Products
 {
-    public class LoadProductsByCategoryAction<T> where T : class
+    public class LoadBooksAction<T> where T : class
     {
         private readonly IProductServiceContract productService;
         private readonly ILogger logger;
 
-        public Func<BaseViewModel<IList<ProductDto>>, T> OnSuccess { get; set; }
+        public Func<BaseViewModel<IList<BookDto>>, T> OnSuccess { get; set; }
 
-        public LoadProductsByCategoryAction(ILogger logger, IProductServiceContract productService)
+        public LoadBooksAction(ILogger logger, IProductServiceContract productService)
         {
             Guardian.ArgumentNotNull(logger, "logger");
             Guardian.ArgumentNotNull(productService, "productService");
@@ -28,12 +29,9 @@ namespace HB.Web.Shared.Actions.Products
             this.productService = productService;
         }
 
-        public T Execute(int categoryId)
+        public T Execute()
         {
-            var productResult = productService.LoadProductsBy(new LoadProductsRequest(new ProductFilterDto()
-            {
-                CategoryId = categoryId
-            }));
+            var productResult = productService.LoadBooks();
 
             if (productResult.IsNull())
             {
@@ -41,10 +39,10 @@ namespace HB.Web.Shared.Actions.Products
                 productResult.Notifications.Add(""); 
             }
 
-            var model = new BaseViewModel<IList<ProductDto>>()
+            var model = new BaseViewModel<IList<BookDto>>()
             {
                 Notifications = productResult.Notifications,
-                Payload = productResult.Products
+                Payload = productResult.Books
             };
 
             return OnSuccess(model);
